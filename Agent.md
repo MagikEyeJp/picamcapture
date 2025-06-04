@@ -18,4 +18,5 @@ This document serves as a template for future contributors who automate tasks in
 
 This repository does not yet include automated tests. Contributors should manually verify that scripts behave as expected. When tests are added, run them before submitting a pull request.
 
-
+## Language
+基本的に、ユーザーとのやりとりは日本語で行なってください
