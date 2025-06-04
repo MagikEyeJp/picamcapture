@@ -12,6 +12,10 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+The versions in the requirements file are chosen so that installation on
+**Raspberry Pi OS** does not require a newer compiler. They install from
+pre-built wheels on Python 3.10.
+
 
 To build the wrapper you need a compiler that supports **C++14**. Run:
 
