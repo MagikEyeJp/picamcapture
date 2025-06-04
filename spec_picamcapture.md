@@ -10,6 +10,7 @@ picamcapture is intended to automate the capture of evaluation images for image 
 - Command line interface for starting a capture session.
 - Optional configuration file to store default parameters.
 - Logging of capture parameters and camera metadata.
+- Python wrapper for the C++ `mkepicam` library via `pybind11`.
 
 ## Directory Layout
 
@@ -27,6 +28,7 @@ The project uses Python 3. Typical dependencies include:
 - `opencv-python` for camera access and image processing
 - `pillow` for image format conversions
 - `libcamera-tools` for low level control on systems that support it
+- `pybind11` to build the wrapper for the C++ `mkepicam` library
 
 See `setup.sh` for an example installation script.
 
