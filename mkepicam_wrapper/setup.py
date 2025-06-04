@@ -10,7 +10,7 @@ ext_modules = [
         ['mkepicam_pybind.cpp'],
         include_dirs=include_dirs,
         language='c++',
-        extra_compile_args=['-std=c++11'],
+        extra_compile_args=['-std=c++14'],
         libraries=['mkepicam']
     )
 ]

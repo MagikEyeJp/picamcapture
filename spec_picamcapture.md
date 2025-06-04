@@ -34,7 +34,7 @@ See `setup.sh` for an example installation script.
 
 ## mkepicam_wrapper Usage
 
-To build the pybind11 wrapper run:
+To build the pybind11 wrapper you need a compiler that supports **C++14**. Run:
 
 ```bash
 cd mkepicam_wrapper
