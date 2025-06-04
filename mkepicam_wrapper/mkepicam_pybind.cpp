@@ -1,5 +1,6 @@
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
+#include <memory>
 #include "mkepicam.h"
 
 namespace py = pybind11;
@@ -14,7 +15,7 @@ PYBIND11_MODULE(mkepicam_pybind, m) {
         .def_readonly("height", &camera_info::height)
         .def_readonly("name", &camera_info::name);
 
-    py::class_<Camera>(m, "Camera", py::nodelete)
+    py::class_<Camera, std::unique_ptr<Camera, py::nodelete>>(m, "Camera")
         .def("get_camera_info", &Camera::get_camera_info)
         .def("open", &Camera::open)
         .def("close", &Camera::close)
