@@ -20,8 +20,10 @@ cd mkepicam_wrapper
 python setup.py build_ext --inplace
 ```
 
-Once built, try the sample capture program:
+Once built, try the sample capture program. Make sure the repository root is in
+`PYTHONPATH` so that Python can locate the wrapper module:
 
 ```bash
-python ../examples/simple_capture.py
+export PYTHONPATH=$(pwd)
+python examples/simple_capture.py
 ```
