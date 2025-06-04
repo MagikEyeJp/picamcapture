@@ -4,3 +4,16 @@ This repository holds scripts for automatically capturing evaluation images from
 
 The `mkepicam_wrapper/` directory contains a small [pybind11](https://pybind11.readthedocs.io/) wrapper for the C++ `mkepicam` library so that camera control can be performed from Python.
 
+
+To build the wrapper run:
+
+```bash
+cd mkepicam_wrapper
+python setup.py build_ext --inplace
+```
+
+Once built, try the sample capture program:
+
+```bash
+python ../examples/simple_capture.py
+```
