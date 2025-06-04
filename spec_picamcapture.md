@@ -32,6 +32,27 @@ The project uses Python 3. Typical dependencies include:
 
 See `setup.sh` for an example installation script.
 
+## mkepicam_wrapper Usage
+
+To build the pybind11 wrapper run:
+
+```bash
+cd mkepicam_wrapper
+python setup.py build_ext --inplace
+```
+
+You can then use the wrapper from Python:
+
+```python
+from mkepicam_wrapper import find_camera
+cam = find_camera()
+cam.open()
+info = cam.get_camera_info()
+print(info.name, info.width, info.height)
+cam.close()
+```
+
+
 ## Usage Example
 
 ```bash
