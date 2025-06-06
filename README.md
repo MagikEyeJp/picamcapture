@@ -20,7 +20,15 @@ To build the wrapper you need a compiler that supports **C++14**.
 export MKEPICAM_LIB=/path/to/libmkepicam.a
 cd mkepicam_wrapper
 python setup.py build_ext --inplace
+# for static builds specify the library path
+MKEPICAM_LIB=/path/to/libmkepicam.a python setup.py build_ext --inplace
 cd ..
+```
+
+Make sure that the `mkepicam` library can be located. When using the shared library (`libmkepicam.so`) copy or symlink it into a standard directory such as `/usr/local/lib` or add that directory to `LD_LIBRARY_PATH`. When linking the static library (`libmkepicam.a`) specify its path with `MKEPICAM_LIB` as shown above.
+
+```bash
+export LD_LIBRARY_PATH=/path/to/lib:$LD_LIBRARY_PATH
 ```
 
 Once built, try the sample capture program. Be sure to include the repository
