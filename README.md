@@ -13,9 +13,11 @@ pip install -r requirements.txt
 ```
 
 
-To build the wrapper you need a compiler that supports **C++14**. Run:
+To build the wrapper you need a compiler that supports **C++14**.
+`libmkepicam.a` へのパスを `MKEPICAM_LIB` 環境変数で指定してからビルドします。
 
 ```bash
+export MKEPICAM_LIB=/path/to/libmkepicam.a
 cd mkepicam_wrapper
 python setup.py build_ext --inplace
 # for static builds specify the library path
