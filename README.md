@@ -18,10 +18,13 @@ To build the wrapper you need a compiler that supports **C++14**. Run:
 ```bash
 cd mkepicam_wrapper
 python setup.py build_ext --inplace
+cd ..
 ```
 
-Once built, try the sample capture program:
+Once built, try the sample capture program. Be sure to include the repository
+root in `PYTHONPATH` so that Python can locate the wrapper module:
 
 ```bash
-python ../examples/simple_capture.py
+export PYTHONPATH=$(pwd)
+python examples/simple_capture.py
 ```
