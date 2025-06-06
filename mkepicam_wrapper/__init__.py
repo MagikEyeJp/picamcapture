@@ -3,7 +3,7 @@
 from importlib import import_module
 
 try:
-    _mod = import_module('mkepicam_pybind')
+    _mod = import_module('.mkepicam_pybind', package=__name__)
 except ImportError as e:
     raise ImportError(
         'mkepicam_pybind module not found. Run setup.py to build it.') from e
