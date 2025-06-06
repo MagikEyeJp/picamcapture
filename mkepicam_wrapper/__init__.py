@@ -6,10 +6,10 @@ try:
     _mod = import_module('.mkepicam_pybind', package=__name__)
 except ImportError as e:
     raise ImportError(
-        'mkepicam_pybind モジュールが見つかりません。まだビルドされていない可能性があります。setup.py を実行してビルドしてください。') from e
+        'mkepicam_pybind モジュールが見つかりません。まだビルドされていない可能性があります。setup.py を実行してビルドしてください。README も参照してください。') from e
 except OSError as e:
     raise OSError(
-        '共有ライブラリが見つからない可能性があります。') from e
+        'libmkepicam.so が見つからない、または libmkepicam.a がリンクされていない可能性があります。README も参照してください。') from e
 
 Camera = _mod.Camera
 CameraInfo = _mod.CameraInfo
